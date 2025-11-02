@@ -33,6 +33,7 @@ import SheetBuilderPage from './components/screens/SheetBuilderPage';
 import SheetList from './components/screens/SheetList';
 import SuperiorItems from './components/screens/SuperiorItems';
 import MagicalItems from './components/screens/MagicalItems';
+import BlankSheet from './components/screens/BlankSheet';
 import ThreatGeneratorScreen from './components/ThreatGenerator/ThreatGeneratorScreen';
 import ThreatHistory from './components/ThreatGenerator/ThreatHistory';
 import ThreatViewWrapper from './components/ThreatGenerator/ThreatViewWrapper';
@@ -291,6 +292,9 @@ function App(): JSX.Element {
                     </Route>
                     <Route path='/sheets'>
                       <SheetList />
+                    </Route>
+                    <Route path='/ficha'>
+                      <BlankSheet isDarkMode={isDarkTheme} />
                     </Route>
                     <Route path='/sheet-builder/:id'>
                       <SheetBuilderPage />

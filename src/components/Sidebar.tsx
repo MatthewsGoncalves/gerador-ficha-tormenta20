@@ -15,6 +15,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import NotesIcon from '@mui/icons-material/Notes';
 import AttachMoney from '@mui/icons-material/AttachMoney';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import CreateIcon from '@mui/icons-material/Create';
 import StorageIcon from '@mui/icons-material/Storage';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import LinkIcon from '@mui/icons-material/Link';
@@ -105,6 +106,11 @@ const Sidebar: React.FC<SidebarProps> = ({
     onCloseSidebar();
   };
 
+  const onClickCreator = () => {
+    history.push('/ficha');
+    onCloseSidebar();
+  };
+
   const onClickItems = () => {
     history.push('/itens-superiores');
     onCloseSidebar();
@@ -175,6 +181,12 @@ const Sidebar: React.FC<SidebarProps> = ({
               <PersonAddIcon />
             </ListItemIcon>
             <Typography variant='inherit'>Ficha Aleatória</Typography>
+          </StyledMenuItem>
+          <StyledMenuItem onClick={onClickCreator}>
+            <ListItemIcon>
+              <CreateIcon />
+            </ListItemIcon>
+            <Typography variant='inherit'>Criador de Fichas</Typography>
           </StyledMenuItem>
           <StyledMenuItem onClick={onClickMap}>
             <ListItemIcon>
